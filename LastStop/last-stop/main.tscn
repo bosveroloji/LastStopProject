@@ -114,5 +114,20 @@ volume_db = -33.583
 autoplay = true
 parameters/looping = true
 
-[node name="Sketchfab_Scene" parent="." unique_id=1157046719 instance=ExtResource("6_7mycd")]
-transform = Transform3D(1.4908966, -0.00016131945, -1.7043095, -0.007585378, 0.9999909, -0.0061730263, 1.8361378, 0.004262107, 1.3838298, -22.215305, 0.43972492, -9.071522)
+[node name="Road" parent="." unique_id=1157046719 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.5024731, 5.094234e-05, -1.6955287, -0.013482935, 0.9999732, -0.010148702, 1.8266433, 0.007339151, 1.394552, -22.215305, 0.43972492, -9.071522)
+
+[node name="Road2" parent="." unique_id=666617082 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4971272, -0.0042822473, -1.6995717, 0.006502946, 0.99999094, -0.0072083687, 1.8310653, -5.015028e-05, 1.3896402, -22.215305, 0.12834263, 42.945313)
+
+[node name="Road3" parent="." unique_id=1959084244 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4971272, -0.0042822473, -1.6995717, 0.006502946, 0.99999094, -0.0072083687, 1.8310653, -5.015028e-05, 1.3896402, -22.215305, 0.4807315, -60.749104)
+
+[node name="Road4" parent="." unique_id=1239915160 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4971272, -0.0042822473, -1.6995717, 0.006502946, 0.99999094, -0.0072083687, 1.8310653, -5.015028e-05, 1.3896402, -22.215305, 0.4807315, -112.412384)
+
+[node name="Road5" parent="." unique_id=575288121 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4971272, -0.0042822473, -1.6995717, 0.006502946, 0.99999094, -0.0072083687, 1.8310653, -5.015028e-05, 1.3896402, -22.215305, 0.4807315, -164.1494)
+
+[node name="Road6" parent="." unique_id=613301070 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4971272, -0.0042822473, -1.6995717, 0.006502946, 0.99999094, -0.0072083687, 1.8310653, -5.015028e-05, 1.3896402, -22.215305, 0.4807315, -215.75626)
