@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byfbalrrisudd"
-path.s3tc="res://.godot/imported/apartmen_building1_4.png-a0f0dcb41eae3e3e33d4fb87ab6130dd.s3tc.ctex"
+uid="uid://co3sopfqxu5jy"
+path.s3tc="res://.godot/imported/street_lamp_1.png-5cdbf2771adcd55c1a964b11b4958005.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d3023413a0d60e8c8c683be4546d025a"
+"md5": "1441289fff73bf7e3e8783a07af07fec"
 }
 
 [deps]
 
-source_file="res://Houses/apartmen_building1_4.png"
-dest_files=["res://.godot/imported/apartmen_building1_4.png-a0f0dcb41eae3e3e33d4fb87ab6130dd.s3tc.ctex"]
+source_file="res://StreetLamp/street_lamp_1.png"
+dest_files=["res://.godot/imported/street_lamp_1.png-5cdbf2771adcd55c1a964b11b4958005.s3tc.ctex"]
 
 [params]
 
@@ -29,8 +29,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=8
+roughness/src_normal="res://StreetLamp/street_lamp_2.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

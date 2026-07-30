@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byfbalrrisudd"
-path.s3tc="res://.godot/imported/apartmen_building1_4.png-a0f0dcb41eae3e3e33d4fb87ab6130dd.s3tc.ctex"
+uid="uid://dgl36skwsmux4"
+path.s3tc="res://.godot/imported/street_lamp_0.png-ca41d7dff2826ffe4e906c7ee253cc85.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "d3023413a0d60e8c8c683be4546d025a"
+"md5": "bd58fabe3ef12a1a7cdd3cd29a1f58bb"
 }
 
 [deps]
 
-source_file="res://Houses/apartmen_building1_4.png"
-dest_files=["res://.godot/imported/apartmen_building1_4.png-a0f0dcb41eae3e3e33d4fb87ab6130dd.s3tc.ctex"]
+source_file="res://StreetLamp/street_lamp_0.png"
+dest_files=["res://.godot/imported/street_lamp_0.png-ca41d7dff2826ffe4e906c7ee253cc85.s3tc.ctex"]
 
 [params]
 
