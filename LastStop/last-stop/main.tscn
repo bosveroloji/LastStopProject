@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://dqdudp8ekj5xx"]
+
+[ext_resource type="Texture2D" uid="uid://0w0ftqf8jn3" path="res://GroundDirtWeedsPatchy004/GroundDirtWeedsPatchy004_COL_2K.jpg" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://bsvrqeqse6577" path="res://player.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bk4b31es2qw8p" path="res://camera_3d.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bvlm06dm6nryl" path="res://BusStop/bus_stop_-_low.glb" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dx8tqhgtv8s7b" path="res://Road/highway_road.glb" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://dcddq6k1wmmtp" path="res://Music And Sounds/9jackjack8-dream-pool-ambient-dreamcore-486226.mp3" id="7_272bh"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pqcdl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_texture = ExtResource("1_1bvp3")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqcdl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pqcdl"]
+size = Vector3(98.10693, 0.2, 1098.3945)
+
+[sub_resource type="Environment" id="Environment_s4ran"]
+background_mode = 1
+background_color = Color(0, 0, 0.12941177, 1)
+fog_light_color = Color(0.27628276, 0.29670075, 0.32846215, 1)
+fog_density = 0.03
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4ran"]
+size = Vector3(2.5302851, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eyspq"]
+
+[node name="Main" type="Node3D" unique_id=979650034]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=926652278]
+transform = Transform3D(50, 0, 0, 0, 70.6257, 0, 0, 0, 85.380516, -0.028384447, 0.05265236, 0.07095528)
+mesh = SubResource("PlaneMesh_pqcdl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lquwl")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=433543273]
+transform = Transform3D(50, 0, 0, 0, 70.6257, 0, 0, 0, 85.380516, -0.028384447, 0.05265236, -169.9143)
+mesh = SubResource("PlaneMesh_pqcdl")
+surface_material_override/0 = SubResource("StandardMaterial3D_lquwl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=780194363]
+transform = Transform3D(0.8660254, 0.3535534, -0.3535534, 0, 0.7071068, 0.7071068, 0.5, -0.61237246, 0.61237246, -5.5159426, 0, 0)
+light_energy = 0.551
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=405122458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.488302, 3, 0)
+script = ExtResource("1_ig7tw")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1508829014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("2_0xm2m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=310206457]
+shape = SubResource("CapsuleShape3D_pqcdl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=987299730]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=809879933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1809082, 0, -464.20724)
+shape = SubResource("BoxShape3D_pqcdl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=752812088]
+
+[node name="Crosshair" type="TextureRect" parent="CanvasLayer" unique_id=1534213010]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=209626099]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Crosshair" type="ColorRect" parent="CanvasLayer/Control" unique_id=417938407]
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 5.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1492572673]
+environment = SubResource("Environment_s4ran")
+
+[node name="BusStop" parent="." unique_id=1896311181 instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.24997166, 0, -0.003763279, 0, 0.25, 0, 0.003763279, 0, -0.24997166, -4.5479364, 2.8556037, -0.91265535)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BusStop" unique_id=309672288]
+transform = Transform3D(0.9999999, 0, 0, 0, 1.3017418, 0, 0, 0, 1.7123866, 9.536743e-07, 0, -0.88287306)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BusStop/StaticBody3D" unique_id=788742854]
+transform = Transform3D(0.103463605, 0, 0, 0, 11.038176, 0, 0, 0, 15.913393, -6.3787165, -1.9901419, 0.6282239)
+shape = SubResource("BoxShape3D_s4ran")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BusStop/StaticBody3D" unique_id=1471447376]
+transform = Transform3D(12.681348, 0, 0, 0, 11.433685, 0, 1.1368684e-13, 0, 0.1487908, 0.023124695, -1.59414, -7.4355426)
+shape = SubResource("BoxShape3D_eyspq")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BusStop/StaticBody3D" unique_id=1763593563]
+transform = Transform3D(12.681348, 0, 0, 0, 11.433685, 0, 1.1368684e-13, 0, 0.1487908, 0.023118973, -1.59414, 9.145512)
+shape = SubResource("BoxShape3D_eyspq")
+
+[node name="Backround Music" type="AudioStreamPlayer" parent="." unique_id=2067974681]
+stream = ExtResource("7_272bh")
+volume_db = -33.583
+autoplay = true
+parameters/looping = true
+
+[node name="Sketchfab_Scene" parent="." unique_id=1157046719 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1.4908966, -0.00016131945, -1.7043095, -0.007585378, 0.9999909, -0.0061730263, 1.8361378, 0.004262107, 1.3838298, -22.215305, 0.43972492, -9.071522)

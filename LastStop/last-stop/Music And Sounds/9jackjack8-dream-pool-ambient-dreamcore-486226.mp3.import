@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dcddq6k1wmmtp"
+path="res://.godot/imported/9jackjack8-dream-pool-ambient-dreamcore-486226.mp3-49907b07c6f0ccd3c8c90a04cde88959.mp3str"
+
+[deps]
+
+source_file="res://Music And Sounds/9jackjack8-dream-pool-ambient-dreamcore-486226.mp3"
+dest_files=["res://.godot/imported/9jackjack8-dream-pool-ambient-dreamcore-486226.mp3-49907b07c6f0ccd3c8c90a04cde88959.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

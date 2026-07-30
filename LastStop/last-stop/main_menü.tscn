@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://djlu0e1oyws8v"]
+
+[ext_resource type="Texture2D" uid="uid://dg7jhmf5evk8q" path="res://MainMenu/AnaMenü0.png" id="1_c8dtp"]
+[ext_resource type="AudioStream" uid="uid://dcddq6k1wmmtp" path="res://Music And Sounds/9jackjack8-dream-pool-ambient-dreamcore-486226.mp3" id="2_8ybon"]
+[ext_resource type="Texture2D" uid="uid://77hbb4fpx56w" path="res://MainMenu/PLAY.png" id="2_m4bd5"]
+[ext_resource type="Script" uid="uid://diaggnp31j3sq" path="res://play_button.gd" id="3_d3jyl"]
+[ext_resource type="Texture2D" uid="uid://c3b0jg0gj6m04" path="res://MainMenu/SETTINGS.png" id="4_ltld1"]
+[ext_resource type="Texture2D" uid="uid://cm6gu3yb7oibo" path="res://MainMenu/EXIT.png" id="5_8ybon"]
+[ext_resource type="Script" uid="uid://c27unm3utajha" path="res://settings_button.gd" id="5_ltld1"]
+[ext_resource type="AudioStream" uid="uid://bscqudlnxsagr" path="res://Music And Sounds/Ustunegel.mp3" id="6_eqyfm"]
+[ext_resource type="Script" uid="uid://d1e4uvkm6akya" path="res://exit_button.gd" id="7_8ybon"]
+[ext_resource type="AudioStream" uid="uid://1t6yecix342y" path="res://Music And Sounds/buttonpress.mp3" id="7_awu28"]
+
+[node name="MainMenü" type="Control" unique_id=185452368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backround" type="TextureRect" parent="." unique_id=1322831804]
+layout_mode = 0
+offset_right = 1161.0
+offset_bottom = 652.0
+texture = ExtResource("1_c8dtp")
+expand_mode = 1
+
+[node name="MenüMusic" type="AudioStreamPlayer" parent="Backround" unique_id=1189442730]
+stream = ExtResource("2_8ybon")
+autoplay = true
+stream_paused = true
+
+[node name="PlayButton" type="TextureButton" parent="." unique_id=89264656]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 216.0
+offset_right = 1245.0
+offset_bottom = 381.0
+texture_normal = ExtResource("2_m4bd5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_d3jyl")
+
+[node name="SettingsButton" type="TextureButton" parent="." unique_id=2091978078]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 330.0
+offset_right = 1092.0
+offset_bottom = 434.0
+texture_normal = ExtResource("4_ltld1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_ltld1")
+
+[node name="ExitButton" type="TextureButton" parent="." unique_id=38040933]
+layout_mode = 0
+offset_left = 773.0
+offset_top = 402.0
+offset_right = 1097.0
+offset_bottom = 506.0
+texture_normal = ExtResource("5_8ybon")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_8ybon")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="." unique_id=1682997559]
+stream = ExtResource("6_eqyfm")
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="." unique_id=133897737]
+stream = ExtResource("7_awu28")
