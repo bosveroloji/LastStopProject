@@ -34,6 +34,35 @@ size = Vector3(2.5302851, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eyspq"]
 
+[sub_resource type="Gradient" id="Gradient_dg77c"]
+offsets = PackedFloat32Array(0, 0.52845526, 1)
+colors = PackedColorArray(0.21950102, 0.21950102, 0.21950102, 1, 0.3137255, 0.3137255, 0.3137255, 0, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_efxa6"]
+gradient = SubResource("Gradient_dg77c")
+fill = 1
+fill_from = Vector2(0.49197862, 0.4973262)
+fill_to = Vector2(0.9946524, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_efxa6")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+proximity_fade_enabled = true
+proximity_fade_distance = 0.3
+
+[sub_resource type="QuadMesh" id="QuadMesh_vcblw"]
+material = SubResource("StandardMaterial3D_5vw27")
+size = Vector2(0.2, 0.2)
+
+[sub_resource type="Gradient" id="Gradient_4c57u"]
+offsets = PackedFloat32Array(0, 0.5283019, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
 [node name="Main" type="Node3D" unique_id=979650034]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=926652278]
@@ -250,8 +279,31 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -6.4636464, 0.099999905
 [node name="SpotLight3D" type="SpotLight3D" parent="StreetLabp" unique_id=1973582800]
 transform = Transform3D(5, 0, 0, 0, -0.15209556, 4.9976864, 0, -4.9976864, -0.15209556, -4.757511, 39.54963, 0.2229805)
 light_energy = 16.0
+shadow_enabled = true
+shadow_bias = 2.353
+distance_fade_enabled = true
 spot_range = 9.602271
 spot_angle = 14.89845
+
+[node name="CPUParticles3D2" type="CPUParticles3D" parent="StreetLabp/SpotLight3D" unique_id=1664552647]
+transform = Transform3D(1.6443214, 0, 0, 0, -0.19728816, -1.6445537, 0, 6.4826636, -0.050049018, -0.016790867, 0.4046545, -5.8905373)
+amount = 50
+lifetime = 5.0
+mesh = SubResource("QuadMesh_vcblw")
+emission_shape = 6
+emission_ring_axis = Vector3(0, -1, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(1, -1, 0)
+gravity = Vector3(0, -0.09, 0)
+initial_velocity_min = 0.01
+initial_velocity_max = 0.1
+damping_max = 0.1
+angle_max = 360.0
+scale_amount_min = 0.1
+color_ramp = SubResource("Gradient_4c57u")
 
 [node name="StreetLabp8" parent="." unique_id=1068305858 instance=ExtResource("8_5vw27")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -6.4636464, 0.099999905, -21.155304)
@@ -412,8 +464,32 @@ transform = Transform3D(-0.2, 0, -1.7484556e-08, 0, 0.2, 0, 1.7484556e-08, 0, -0
 [node name="SpotLight3D" type="SpotLight3D" parent="StreetLabp19" unique_id=1573809122]
 transform = Transform3D(5, 0, 0, 0, -0.15209556, 4.9976864, 0, -4.9976864, -0.15209556, -4.757511, 39.54963, 0.2229805)
 light_energy = 16.0
+light_volumetric_fog_energy = 4.687
+shadow_enabled = true
+shadow_bias = 2.315
+distance_fade_enabled = true
 spot_range = 9.602271
 spot_angle = 14.89845
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="StreetLabp19/SpotLight3D" unique_id=792364678]
+transform = Transform3D(-1.6443214, 0, 1.4383804e-07, 1.4368462e-07, -0.19728816, 1.6445537, 4.3727817e-09, 6.4826636, 0.050049018, 0.030223846, -0.1896441, -5.9086227)
+amount = 50
+lifetime = 5.0
+mesh = SubResource("QuadMesh_vcblw")
+emission_shape = 6
+emission_ring_axis = Vector3(0, -1, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(1, -1, 0)
+gravity = Vector3(0, -0.09, 0)
+initial_velocity_min = 0.01
+initial_velocity_max = 0.1
+damping_max = 0.1
+angle_max = 360.0
+scale_amount_min = 0.1
+color_ramp = SubResource("Gradient_4c57u")
 
 [node name="StreetLabp20" parent="." unique_id=532522729 instance=ExtResource("8_5vw27")]
 transform = Transform3D(-0.2, 0, -1.7484556e-08, 0, 0.2, 0, 1.7484556e-08, 0, -0.2, -24.75327, 0.099999905, -21.155304)
